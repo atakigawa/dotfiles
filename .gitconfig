@@ -1,0 +1,49 @@
+[user]
+    name = Akinori Takigawa
+    email = akinori.takigawa@gmail.com
+
+[core]
+    excludesfile = /Users/kenken/.gitignore
+
+[alias]
+    ci = commit
+    co = checkout
+    st = status -sb
+    br = branch
+    bra = branch -a
+    brv = branch -v
+    brvv = branch -vv
+    praise = blame 
+    difflog = log -p HEAD@{3.days.ago}
+    oneline = log --pretty=oneline --decorate
+    filenames = log --name-only
+    edit-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; vim `f`"
+    add-unmerged = "!f() { git ls-files --unmerged | cut -f2 | sort -u ; }; git add `f`"
+    diffs = diff --staged
+    l = log --stat
+    lg = log --graph -n 20 --pretty=format:'%C(yellow)%h %C(green)(%ar)%C(reset) %s %C(white)- %an%C(cyan)%d%C(reset)'
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[color "branch"]
+    current = yellow reverse
+    local = yellow 
+    remote = green
+
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
+
+[github]
+    user = atakigawa
+    token = 2b11df7fd9c3661094e4414596b1b01a 
