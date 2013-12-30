@@ -191,6 +191,9 @@ Bundle 'sudo.vim'
 "coffee syntax
 Bundle "https://github.com/kchmck/vim-coffee-script.git"
 
+"solorized color scheme
+Bundle "altercation/vim-colors-solarized.git"
+
 "enable filetype detection, ftplugin, and indent
 filetype plugin indent on
 

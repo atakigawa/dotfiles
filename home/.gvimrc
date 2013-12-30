@@ -10,7 +10,7 @@ set iminsert=0 imsearch=0
 inoremap <silent> <ESC> <ESC>:set iminsert=0<CR><ESC>
 
 "color
-colorscheme desertEx
+colorscheme solarized
 
 "dont show toolbar
 set guioptions-=T
