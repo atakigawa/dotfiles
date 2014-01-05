@@ -123,6 +123,8 @@ Bundle 'gmarik/vundle'
 
 Bundle 'YankRing.vim'
 
+Bundle 'othree/eregex.vim'
+
 Bundle 'http://github.com/tpope/vim-surround.git'
 Bundle 'http://github.com/tpope/vim-repeat.git'
 Bundle 'http://github.com/thinca/vim-ref.git'
