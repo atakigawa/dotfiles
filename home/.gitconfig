@@ -3,7 +3,7 @@
     email = akinori.takigawa@gmail.com
 
 [core]
-    excludesfile = /Users/kenken/.gitignore
+    excludesfile = ~/.gitignore
 
 [alias]
     ci = commit
