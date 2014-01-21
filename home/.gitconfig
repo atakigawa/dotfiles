@@ -30,7 +30,7 @@
 
 [color "branch"]
     current = yellow reverse
-    local = yellow 
+    local = yellow
     remote = green
 
 [color "diff"]
@@ -43,7 +43,3 @@
     added = yellow
     changed = green
     untracked = cyan
-
-[github]
-    user = atakigawa
-    token = 2b11df7fd9c3661094e4414596b1b01a 
