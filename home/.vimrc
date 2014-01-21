@@ -124,6 +124,7 @@ Bundle 'gmarik/vundle'
 Bundle 'YankRing.vim'
 
 Bundle 'othree/eregex.vim'
+let g:eregex_default_enable = 0
 
 Bundle 'http://github.com/tpope/vim-surround.git'
 Bundle 'http://github.com/tpope/vim-repeat.git'
@@ -137,8 +138,10 @@ nnoremap <silent> <Space>ubd :<C-u>UniteWithBufferDir -buffer-name=file file<CR>
 nnoremap <silent> <Space>ue. :<C-u>UniteWithCurrentDir -buffer-name=file file<CR>
 
 "neocomplecache
-Bundle 'http://github.com/Shougo/neocomplcache.git'
-Bundle 'https://github.com/Shougo/neosnippet'
+"neosnippet"
+Bundle 'Shougo/neocomplcache.git'
+Bundle 'Shougo/neosnippet'
+Bundle 'Shougo/neosnippet-snippets'
 let g:neocomplcache_enable_at_startup = 1
 let g:neocomplcache_enable_smart_case = 1
 let g:neocomplcache_min_syntax_length = 3
@@ -148,6 +151,11 @@ imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expan
 inoremap <expr><C-h> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><BS> neocomplcache#smart_close_popup()."\<C-h>"
 inoremap <expr><C-e> neocomplcache#cancel_popup()
+
+"vinarise
+Bundle 'Shougo/vinarise.git'
+let g:vinarise_enable_auto_detect=1
+let g:vinarise_objdump_command='gobjdump'
 
 "quickrun
 Bundle 'http://github.com/thinca/vim-quickrun.git'
