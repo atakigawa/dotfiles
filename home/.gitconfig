@@ -5,6 +5,9 @@
 [core]
     excludesfile = ~/.gitignore
 
+[push]
+    default = simple
+
 [alias]
     ci = commit
     co = checkout
