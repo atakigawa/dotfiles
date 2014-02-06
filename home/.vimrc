@@ -154,7 +154,6 @@ inoremap <expr><C-e> neocomplcache#cancel_popup()
 
 "vinarise
 Bundle 'Shougo/vinarise.git'
-let g:vinarise_enable_auto_detect=1
 let g:vinarise_objdump_command='gobjdump'
 
 "quickrun
@@ -199,7 +198,10 @@ nmap <silent> nt :cd %:p:h<CR>:NERDTreeToggle<CR>
 Bundle 'sudo.vim'
 
 "coffee syntax
-Bundle "https://github.com/kchmck/vim-coffee-script.git"
+Bundle "kchmck/vim-coffee-script.git"
+
+"chuck syntax
+Bundle "vim-scripts/ck.vim"
 
 "solorized color scheme
 Bundle "altercation/vim-colors-solarized.git"
