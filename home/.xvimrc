@@ -1,0 +1,8 @@
+set ignorecase
+set smartcase
+set incsearch
+set nohlsearch
+
+set clipboard=unnamed
+
+imap <C-j> <CR>
