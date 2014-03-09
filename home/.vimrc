@@ -132,6 +132,7 @@ Bundle 'http://github.com/thinca/vim-ref.git'
 
 "unite.vim
 Bundle 'http://github.com/Shougo/unite.vim.git'
+Bundle 'http://github.com/Shougo/neomru.vim.git'
 let g:unite_enable_start_insert = 1
 nnoremap <silent> <Space>uru :<C-u>Unite -buffer-name=mru file_mru directory_mru<CR>
 nnoremap <silent> <Space>ubd :<C-u>UniteWithBufferDir -buffer-name=file file<CR>
@@ -205,6 +206,9 @@ Bundle "vim-scripts/ck.vim"
 
 "solorized color scheme
 Bundle "altercation/vim-colors-solarized.git"
+
+"syntastic
+Bundle "scrooloose/syntastic.git"
 
 "enable filetype detection, ftplugin, and indent
 filetype plugin indent on
