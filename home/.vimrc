@@ -204,6 +204,9 @@ Bundle "kchmck/vim-coffee-script.git"
 "chuck syntax
 Bundle "vim-scripts/ck.vim"
 
+"json syntax
+Bundle "elzr/vim-json"
+
 "solorized color scheme
 Bundle "altercation/vim-colors-solarized.git"
 
