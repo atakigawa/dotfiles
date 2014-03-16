@@ -145,10 +145,10 @@ nnoremap <silent> tl :TagbarToggle<CR>
 
 "NERDTree"
 Bundle 'https://github.com/scrooloose/nerdtree.git'
-let g:NERDTreeChDirMode = 1
+let g:NERDTreeChDirMode = 0
 let g:NERDTreeShowHidden = 1
-nmap <silent> no :cd %:p:h<CR>:NERDTree<CR>
-nmap <silent> nt :cd %:p:h<CR>:NERDTreeToggle<CR>
+nmap <silent> no :NERDTree %<CR>
+nmap <silent> nt :NERDTreeToggle %<CR>
 
 "sudo.vim
 Bundle 'sudo.vim'
@@ -167,6 +167,10 @@ Bundle "altercation/vim-colors-solarized.git"
 
 "syntastic
 Bundle "scrooloose/syntastic.git"
+
+"cscope"
+Bundle "atakigawa/cscope_plus.vim"
+let g:cscope_plus_leader_key = "<C-@>"
 
 "enable filetype detection, ftplugin, and indent
 filetype plugin indent on
