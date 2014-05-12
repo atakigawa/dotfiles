@@ -147,8 +147,8 @@ nnoremap <silent> tl :TagbarToggle<CR>
 Bundle 'https://github.com/scrooloose/nerdtree.git'
 let g:NERDTreeChDirMode = 0
 let g:NERDTreeShowHidden = 1
-nmap <silent> no :NERDTree %<CR>
-nmap <silent> nt :NERDTreeToggle %<CR>
+nmap <silent> <Space>no :NERDTree %<CR>
+nmap <silent> <Space>nt :NERDTreeToggle %<CR>
 
 "sudo.vim
 Bundle 'sudo.vim'
