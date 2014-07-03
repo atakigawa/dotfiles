@@ -127,7 +127,7 @@ let g:quickrun_config = {
 \}
 
 "zencoding
-Bundle 'http://github.com/mattn/zencoding-vim.git'
+Bundle 'http://github.com/mattn/emmet-vim.git'
 let g:user_zen_leader_key = '<C-z>'
 let g:user_zen_settings = {
 \  'indentation' : '    '
@@ -168,11 +168,53 @@ Bundle "altercation/vim-colors-solarized.git"
 "syntastic
 Bundle "scrooloose/syntastic.git"
 
-"cscope"
+"cscope
 Bundle "atakigawa/cscope_plus.vim"
 let g:cscope_plus_leader_key = "<C-@>"
 
+"golang
+Bundle "jnwhiteh/vim-golang"
+
 "enable filetype detection, ftplugin, and indent
 filetype plugin indent on
+
+"golang settings
+augroup Go
+  autocmd!
+  "auto format go files on save
+  autocmd BufWritePre *.go Fmt
+  "adjust format options for go
+  autocmd FileType go setlocal noexpandtab
+  autocmd FileType go setlocal nolist
+augroup END
+
+let g:tagbar_type_go = {
+  \ 'ctagstype' : 'go',
+  \ 'kinds'     : [
+      \ 'p:package',
+      \ 'i:imports:1',
+      \ 'c:constants',
+      \ 'v:variables',
+      \ 't:types',
+      \ 'n:interfaces',
+      \ 'w:fields',
+      \ 'e:embedded',
+      \ 'm:methods',
+      \ 'r:constructor',
+      \ 'f:functions'
+  \ ],
+  \ 'sro' : '.',
+  \ 'kind2scope' : {
+      \ 't' : 'ctype',
+      \ 'n' : 'ntype'
+  \ },
+  \ 'scope2kind' : {
+      \ 'ctype' : 't',
+      \ 'ntype' : 'n'
+  \ },
+  \ 'ctagsbin'  : 'gotags',
+  \ 'ctagsargs' : '-sort -silent'
+  \ }
+
 
 " " }}}
