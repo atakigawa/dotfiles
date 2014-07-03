@@ -1,4 +1,4 @@
 .netrwhist
+home/.vim/bundle/*
 home/.vim/tmp/*
-home/.vim/bundle
-
+!.gitkeep
