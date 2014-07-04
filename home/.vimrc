@@ -78,9 +78,7 @@ endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
 
-NeoBundleFetch 'Shougo/neobundle.vim'''
-
-NeoBundle 'gmarik/vundle'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 NeoBundle 'YankRing.vim'
 
@@ -89,7 +87,6 @@ let g:eregex_default_enable = 0
 
 NeoBundle 'http://github.com/tpope/vim-surround.git'
 NeoBundle 'http://github.com/tpope/vim-repeat.git'
-NeoBundle 'http://github.com/thinca/vim-ref.git'
 
 "unite.vim
 NeoBundle 'http://github.com/Shougo/unite.vim.git'
@@ -165,6 +162,7 @@ NeoBundle "kchmck/vim-coffee-script.git"
 NeoBundle "vim-scripts/ck.vim"
 "json syntax
 NeoBundle "elzr/vim-json"
+let g:vim_json_syntax_conceal = 0
 "slim syntax
 NeoBundle 'slim-template/vim-slim.git'
 
@@ -182,7 +180,7 @@ let g:cscope_plus_leader_key = "<C-@>"
 NeoBundle "jnwhiteh/vim-golang"
 
 "golang settings
-augroup Go
+augroup Golang
   autocmd!
   "auto format go files on save
   autocmd BufWritePre *.go Fmt
