@@ -37,6 +37,7 @@ set hlsearch
 
 set foldmethod=indent
 set hidden
+set backspace=2
 
 nnoremap <C-Left> :bprev<CR>
 nnoremap <C-Right> :bnext<CR>
