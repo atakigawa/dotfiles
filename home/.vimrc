@@ -57,7 +57,13 @@ inoremap [ []<Left>
 inoremap " ""<Left>
 inoremap ' ''<Left>
 inoremap <C-@> <C-[>
-autocmd FileType html inoremap < <><left>
+
+augroup html
+  autocmd!
+  autocmd FileType html inoremap < <><left>
+  autocmd FileType html set shiftwidth=2
+  autocmd FileType html set tabstop=2
+augroup END
 
 vnoremap <C-@> <C-[>
 
@@ -66,6 +72,8 @@ cnoremap <C-e> <End>
 cnoremap <C-f> <Right>
 cnoremap <C-b> <Left>
 cnoremap <C-v> <C-r>*
+
+autocmd BufEnter *.md set filetype=markdown
 
 "migemo
 nnoremap m/ g/
@@ -217,6 +225,9 @@ let g:tagbar_type_go = {
   \ 'ctagsbin'  : 'gotags',
   \ 'ctagsargs' : '-sort -silent'
   \ }
+
+"ace
+NeoBundle "yosssi/vim-ace"
 
 call neobundle#end()
 filetype plugin indent on
