@@ -178,21 +178,19 @@ NeoBundle 'slim-template/vim-slim.git'
 "solorized color scheme
 NeoBundle "altercation/vim-colors-solarized.git"
 
-"syntastic
-NeoBundle "scrooloose/syntastic.git"
-
 "cscope
 NeoBundle "atakigawa/cscope_plus.vim"
 let g:cscope_plus_leader_key = "<C-@>"
 
 "golang
-NeoBundle "jnwhiteh/vim-golang"
+NeoBundle "fatih/vim-go.git"
+let g:go_fmt_command = "goimports"
+
+set rtp+=/Users/kenken/go/src/github.com/golang/lint/misc/vim
 
 "golang settings
 augroup Golang
   autocmd!
-  "auto format go files on save
-  autocmd BufWritePre *.go Fmt
   "adjust format options for go
   autocmd FileType go setlocal noexpandtab
   autocmd FileType go setlocal nolist
@@ -228,6 +226,10 @@ let g:tagbar_type_go = {
 
 "ace
 NeoBundle "yosssi/vim-ace"
+
+"syntastic
+NeoBundle "scrooloose/syntastic.git"
+let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 
 call neobundle#end()
 filetype plugin indent on

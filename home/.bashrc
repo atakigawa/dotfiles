@@ -6,6 +6,8 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 
+alias vi='vim'
+
 alias gst='git st'
 
 alias titanium='~/Library/Application\ Support/Titanium/mobilesdk/osx/1.8.1/titanium.py'
