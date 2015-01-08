@@ -44,9 +44,6 @@ nnoremap <C-Right> :bnext<CR>
 nnoremap U <ESC>
 nnoremap j gj
 nnoremap k gk
-nnoremap <C-t> :tabnew<CR>
-nnoremap <C-Tab> gt
-nnoremap <C-S-Tab> gT
 "toggle among MacVim windows
 nnoremap <silent> gw :macaction _cycleWindows:<CR>
 nnoremap <silent> gW :macaction _cycleWindowsBackwards:<CR>
