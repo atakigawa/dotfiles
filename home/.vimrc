@@ -62,6 +62,10 @@ augroup html
   autocmd FileType html set tabstop=2
 augroup END
 
+autocmd Filetype css setlocal sw=2 ts=2
+autocmd Filetype sass setlocal sw=2 ts=2
+autocmd Filetype scss setlocal sw=2 ts=2
+
 vnoremap <C-@> <C-[>
 
 cnoremap <C-a> <Home>
