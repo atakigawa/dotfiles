@@ -228,6 +228,9 @@ let g:tagbar_type_go = {
 "ace
 NeoBundle "yosssi/vim-ace"
 
+"elixir
+NeoBundle 'elixir-lang/vim-elixir'
+
 "syntastic
 NeoBundle "scrooloose/syntastic.git"
 let g:syntastic_go_checkers = ['go', 'golint', 'govet']
