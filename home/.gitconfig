@@ -17,7 +17,7 @@
     bra = branch -a
     brv = branch -v
     brvv = branch -vv
-    praise = blame 
+    praise = blame
     difflog = log -p HEAD@{3.days.ago}
     oneline = log --pretty=oneline --decorate
     filenames = log --name-only
@@ -47,3 +47,7 @@
 #    added = yellow
 #    changed = green
 #    untracked = cyan
+
+[merge "mergepbx"]
+    name = Xcode project files merger
+    driver = mergepbx %O %A %B
