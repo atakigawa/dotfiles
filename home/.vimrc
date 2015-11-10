@@ -234,6 +234,8 @@ NeoBundle 'elixir-lang/vim-elixir'
 "syntastic
 NeoBundle "scrooloose/syntastic.git"
 let g:syntastic_go_checkers = ['go', 'golint', 'govet']
+let g:syntastic_python_checkers = ['pep8', 'pyflakes']
+let g:syntastic_python_pep8_args = '--ignore=E231,E226' " allow no-whitespace
 
 call neobundle#end()
 filetype plugin indent on
