@@ -12,3 +12,5 @@ alias gst='git st'
 
 alias titanium='~/Library/Application\ Support/Titanium/mobilesdk/osx/1.8.1/titanium.py'
 alias titanium_run_android='titanium run --platform=android --android=/Applications/android-sdk-macosx' 
+
+[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh

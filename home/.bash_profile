@@ -41,5 +41,3 @@ PATH=$PATH:$HOME/go/bin
 export GOPATH
 export PATH
 
-#enable nvm
-[[ -s $HOME/.nvm/nvm.sh ]] && . $HOME/.nvm/nvm.sh && nvm use v0.10.26
