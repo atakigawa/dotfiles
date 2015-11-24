@@ -95,20 +95,21 @@ NeoBundle 'YankRing.vim'
 NeoBundle 'othree/eregex.vim'
 let g:eregex_default_enable = 0
 
-NeoBundle 'http://github.com/tpope/vim-surround.git'
-NeoBundle 'http://github.com/tpope/vim-repeat.git'
+NeoBundle 'tpope/vim-surround'
+NeoBundle 'tpope/vim-repeat'
 
 "unite.vim
-NeoBundle 'http://github.com/Shougo/unite.vim.git'
-NeoBundle 'http://github.com/Shougo/neomru.vim.git'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimproc.vim'
 let g:unite_enable_start_insert = 1
-nnoremap <silent> <Space>uru :<C-u>Unite -buffer-name=mru file_mru directory_mru<CR>
-nnoremap <silent> <Space>ubd :<C-u>UniteWithBufferDir -buffer-name=file file<CR>
-nnoremap <silent> <Space>ue. :<C-u>UniteWithCurrentDir -buffer-name=file file<CR>
+nnoremap <silent> <Space>uf :<C-u>UniteWithBufferDir -buffer-name=files file_rec/async:!<CR>
+nnoremap <silent> <Space>ur :<C-u>Unite -buffer-name=mru file_mru<CR>
+nnoremap <silent> <Space>ub :<C-u>Unite -buffer-name=buffer buffer<CR>
 
 "neocomplecache
 "neosnippet"
-NeoBundle 'Shougo/neocomplete.git'
+NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/neosnippet'
 NeoBundle 'Shougo/neosnippet-snippets'
 let g:neocomplete#enable_at_startup = 1
@@ -122,11 +123,11 @@ inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
 inoremap <expr><C-e> neocomplete#cancel_popup()
 
 "vinarise
-NeoBundle 'Shougo/vinarise.git'
+NeoBundle 'Shougo/vinarise'
 let g:vinarise_objdump_command='gobjdump'
 
 "quickrun
-NeoBundle 'http://github.com/thinca/vim-quickrun.git'
+NeoBundle 'thinca/vim-quickrun'
 nnoremap <Space>qr :QuickRun<CR>
 let g:quickrun_config = {
 \  '*': {
@@ -140,51 +141,51 @@ let g:quickrun_config = {
 \}
 
 "zencoding
-NeoBundle 'http://github.com/mattn/emmet-vim.git'
+NeoBundle 'mattn/emmet-vim'
 let g:user_zen_leader_key = '<C-z>'
 let g:user_zen_settings = {
 \  'indentation' : '    '
 \}
 
 "speeddating
-NeoBundle 'http://github.com/tpope/vim-speeddating.git'
+NeoBundle 'tpope/vim-speeddating'
 nmap <silent> d; <Plug>SpeedDatingNowLocal
 
 "tagbar
-NeoBundle 'https://github.com/majutsushi/tagbar.git'
+NeoBundle 'majutsushi/tagbar'
 let g:tagbar_width = 30
 let g:tagbar_sort = 0 "don't sort by name
 nnoremap <silent> tl :TagbarToggle<CR>
 
 "NERDTree"
-NeoBundle 'https://github.com/scrooloose/nerdtree.git'
+NeoBundle 'scrooloose/nerdtree'
 let g:NERDTreeChDirMode = 0
 let g:NERDTreeShowHidden = 1
-nmap <silent> <Space>no :NERDTree %<CR>
-nmap <silent> <Space>nt :NERDTreeToggle %<CR>
+nmap <silent> <Space>no :NERDTree %:p:h<CR><CR>
+nmap <silent> <Space>nt :NERDTreeToggle %:p:h<CR>
 
 "sudo.vim
 NeoBundle 'sudo.vim'
 
 "coffee syntax
-NeoBundle "kchmck/vim-coffee-script.git"
+NeoBundle "kchmck/vim-coffee-script"
 "chuck syntax
 NeoBundle "vim-scripts/ck.vim"
 "json syntax
 NeoBundle "elzr/vim-json"
 let g:vim_json_syntax_conceal = 0
 "slim syntax
-NeoBundle 'slim-template/vim-slim.git'
+NeoBundle 'slim-template/vim-slim'
 
 "solorized color scheme
-NeoBundle "altercation/vim-colors-solarized.git"
+NeoBundle "altercation/vim-colors-solarized"
 
 "cscope
 NeoBundle "atakigawa/cscope_plus.vim"
 let g:cscope_plus_leader_key = "<C-@>"
 
 "golang
-NeoBundle "fatih/vim-go.git"
+NeoBundle "fatih/vim-go"
 let g:go_fmt_command = "goimports"
 
 set rtp+=/Users/kenken/go/src/github.com/golang/lint/misc/vim
@@ -232,7 +233,7 @@ NeoBundle "yosssi/vim-ace"
 NeoBundle 'elixir-lang/vim-elixir'
 
 "syntastic
-NeoBundle "scrooloose/syntastic.git"
+NeoBundle "scrooloose/syntastic"
 let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
 let g:syntastic_python_pep8_args = '--ignore=E231,E226' " allow no-whitespace
@@ -240,3 +241,7 @@ let g:syntastic_python_pep8_args = '--ignore=E231,E226' " allow no-whitespace
 call neobundle#end()
 filetype plugin indent on
 NeoBundleCheck
+
+" has to be called after neobundle#end()
+let s:unite_ignore_patterns='\.\(gif\|jpe\?g\|png\|webp\)$\|.sass-cache'
+call unite#custom#source('file_rec/async', 'ignore_pattern', s:unite_ignore_patterns)
