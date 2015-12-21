@@ -103,7 +103,8 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'Shougo/vimproc.vim'
 let g:unite_enable_start_insert = 1
-nnoremap <silent> <Space>uf :<C-u>UniteWithBufferDir -buffer-name=files file_rec/async:!<CR>
+nnoremap <silent> <Space>uf :<C-u>Unite -buffer-name=files file_rec/async:!<CR>
+nnoremap <silent> <Space>uF :<C-u>UniteWithBufferDir -buffer-name=files file_rec/async:!<CR>
 nnoremap <silent> <Space>ur :<C-u>Unite -buffer-name=mru file_mru<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite -buffer-name=buffer buffer<CR>
 
@@ -161,7 +162,7 @@ nnoremap <silent> tl :TagbarToggle<CR>
 NeoBundle 'scrooloose/nerdtree'
 let g:NERDTreeChDirMode = 0
 let g:NERDTreeShowHidden = 1
-nmap <silent> <Space>no :NERDTree %:p:h<CR><CR>
+nmap <silent> <Space>no :NERDTree %:p:h<CR>
 nmap <silent> <Space>nt :NERDTreeToggle %:p:h<CR>
 
 "sudo.vim
@@ -236,7 +237,10 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle "scrooloose/syntastic"
 let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
-let g:syntastic_python_pep8_args = '--ignore=E231,E226' " allow no-whitespace
+let g:syntastic_python_pep8_args = '--ignore=E231,E226,E402'
+let g:syntastic_javascript_checkers = ['jshint']
+let g:syntastic_css_checkers = ['prettycss']
+let g:syntastic_css_prettycss_args = '-i suggest-relative-unit:px -i browser-only:ie'
 
 call neobundle#end()
 filetype plugin indent on
