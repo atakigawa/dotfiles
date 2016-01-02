@@ -41,3 +41,9 @@ PATH=$PATH:$HOME/go/bin
 export GOPATH
 export PATH
 
+if [ -e $(which pyenv) ]; then
+    eval "$(pyenv init -)"
+fi
+if [ -e $(which python) ]; then
+    export PYTHONSTARTUP="${HOME}/.pythonstartup.py"
+fi
