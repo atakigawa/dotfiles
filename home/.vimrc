@@ -237,7 +237,7 @@ NeoBundle 'elixir-lang/vim-elixir'
 NeoBundle "scrooloose/syntastic"
 let g:syntastic_go_checkers = ['go', 'golint', 'govet']
 let g:syntastic_python_checkers = ['pep8', 'pyflakes']
-let g:syntastic_python_pep8_args = '--ignore=E231,E226,E402'
+let g:syntastic_python_pep8_args = '--ignore=E128,E231,E226,E402'
 let g:syntastic_javascript_checkers = ['jshint']
 let g:syntastic_css_checkers = ['prettycss']
 let g:syntastic_css_prettycss_args = '-i suggest-relative-unit:px -i browser-only:ie'
