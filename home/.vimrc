@@ -177,6 +177,8 @@ NeoBundle "elzr/vim-json"
 let g:vim_json_syntax_conceal = 0
 "slim syntax
 NeoBundle 'slim-template/vim-slim'
+"js syntax (es6)
+NeoBundle 'othree/yajs.vim'
 
 "solorized color scheme
 NeoBundle "altercation/vim-colors-solarized"
