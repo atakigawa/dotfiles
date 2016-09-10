@@ -34,6 +34,12 @@ if [ -d "/opt/depot_tools" ]; then
     PATH="/opt/depot_tools":${PATH}
 fi
 
+#add git diff-highlight path
+diff_highlight="/usr/local/share/git-core/contrib/diff-highlight"
+if [ -d ${diff_highlight} ]; then
+    PATH=${diff_highlight}:${PATH}
+fi
+
 #add GOPATH
 GOPATH=$HOME/go
 PATH=$PATH:$HOME/go/bin
