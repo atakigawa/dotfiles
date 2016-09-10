@@ -26,8 +26,8 @@ set undofile
 set list listchars=trail:*
 highlight SpecialKey term=underline ctermbg=red guibg=red
 
-set shiftwidth=4
-set tabstop=4
+set shiftwidth=2
+set tabstop=2
 set expandtab
 
 set ignorecase
