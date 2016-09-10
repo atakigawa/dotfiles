@@ -58,13 +58,7 @@ inoremap <C-@> <C-[>
 augroup html
   autocmd!
   autocmd FileType html inoremap < <><left>
-  autocmd FileType html set shiftwidth=2
-  autocmd FileType html set tabstop=2
 augroup END
-
-autocmd Filetype css setlocal sw=2 ts=2
-autocmd Filetype sass setlocal sw=2 ts=2
-autocmd Filetype scss setlocal sw=2 ts=2
 
 vnoremap <C-@> <C-[>
 
