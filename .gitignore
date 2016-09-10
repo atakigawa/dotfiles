@@ -1,4 +1,8 @@
 .netrwhist
-home/.vim/bundle/*
 home/.vim/tmp/*
+home/.vim/.dein/*
+home/.vim/repos/*
+home/.vim/rollbacks/*
+home/.vim/merged
+home/.vim/temp/*
 !.gitkeep
