@@ -17,6 +17,7 @@
     bra = branch -a
     brv = branch -v
     brvv = branch -vv
+    pullr = pull --recurse-submodules
     praise = blame
     difflog = log -p HEAD@{3.days.ago}
     oneline = log --pretty=oneline --decorate

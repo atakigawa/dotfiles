@@ -86,6 +86,9 @@ endif
 
 call dein#end()
 
+let s:unite_ignore_patterns='\.\(gif\|jpe\?g\|png\|webp\)$\|.sass-cache'
+call unite#custom#source('file_rec/async', 'ignore_pattern', s:unite_ignore_patterns)
+
 filetype plugin indent on
 
 " install uninstalled plugins on startup.
