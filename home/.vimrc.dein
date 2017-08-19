@@ -159,3 +159,6 @@ let g:rbpt_colorpairs = [
     \ ['darkcyan',    'SeaGreen3'],
     \ ]
 let g:rbpt_max = 8
+
+"vue.js
+call dein#add('posva/vim-vue')
