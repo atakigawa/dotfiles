@@ -18,20 +18,14 @@ nnoremap <silent> <Space>uF :<C-u>UniteWithBufferDir -buffer-name=files file_rec
 nnoremap <silent> <Space>ur :<C-u>Unite -buffer-name=mru file_mru<CR>
 nnoremap <silent> <Space>ub :<C-u>Unite -buffer-name=buffer buffer<CR>
 
-"neocomplete
-"neosnippet"
-call dein#add('Shougo/neocomplete')
-call dein#add('Shougo/neosnippet')
-call dein#add('Shougo/neosnippet-snippets')
-let g:neocomplete#enable_at_startup = 1
-let g:neocomplete#enable_smart_case = 1
-let g:neocomplete#sources#syntax#min_keyword_length = 3
-let g:neocomplete#max_list = 30
-let g:neosnippet#snippets_directory = "~/.vim/snippets"
-imap <expr><TAB> neosnippet#expandable_or_jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
-inoremap <expr><C-h> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><BS> neocomplete#smart_close_popup()."\<C-h>"
-inoremap <expr><C-e> neocomplete#cancel_popup()
+call dein#add('Shougo/deoplete.nvim')
+if !has('nvim')
+  call dein#add('roxma/nvim-yarp')
+  call dein#add('roxma/vim-hug-neovim-rpc')
+endif
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#jedi#python_path = '/usr/local/bin/python3'
+call dein#add('zchee/deoplete-jedi')
 
 "vinarise
 call dein#add('Shougo/vinarise')
