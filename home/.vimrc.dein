@@ -1,6 +1,6 @@
 call dein#add('Shougo/dein.vim')
 
-call dein#add('YankRing.vim')
+call dein#add('vim-scripts/YankRing.vim')
 
 call dein#add('othree/eregex.vim')
 let g:eregex_default_enable = 0
