@@ -37,10 +37,6 @@ inoremap <expr><C-e> neocomplete#cancel_popup()
 call dein#add('Shougo/vinarise')
 let g:vinarise_objdump_command='gobjdump'
 
-"speeddating
-call dein#add('tpope/vim-speeddating')
-nmap <silent> d; <Plug>SpeedDatingNowLocal
-
 "tagbar
 call dein#add('majutsushi/tagbar')
 let g:tagbar_width = 30
