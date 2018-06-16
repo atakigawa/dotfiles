@@ -47,6 +47,21 @@ nmap <silent> <Space>nt :NERDTreeToggle %:p:h<CR>
 "sudo.vim
 call dein#add('vim-scripts/sudo.vim')
 
+"lightline
+set laststatus=2
+call dein#add('itchyny/lightline.vim')
+let g:lightline = {
+    \ 'active': {
+    \   'left': [
+    \     ['mode', 'paste'],
+    \     ['readonly', 'filename', 'modified', 'ale'],
+    \   ]
+    \ },
+    \ 'component_function': {
+    \   'ale': 'ALEGetStatusLine'
+    \ }
+  \ }
+
 "coffee syntax
 call dein#add('kchmck/vim-coffee-script')
 "chuck syntax
@@ -114,15 +129,18 @@ call dein#add('yosssi/vim-ace')
 "elixir
 call dein#add('elixir-lang/vim-elixir')
 
-"syntastic
-call dein#add('scrooloose/syntastic')
-let g:syntastic_go_checkers = ['go', 'golint', 'govet']
-let g:syntastic_python_checkers = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore=E121,E123,E126,E127,E128,E226,E231,E402,E704'
-let g:syntastic_javascript_checkers = ['jshint']
-let g:syntastic_css_checkers = ['prettycss']
-let g:syntastic_css_prettycss_args = '-i suggest-relative-unit:px -i browser-only:ie'
-let g:syntastic_html_checkers = []
+"ale
+call dein#add('w0rp/ale')
+let g:ale_lint_on_text_changed = 'never'
+let g:ale_linters = {
+  \ 'python': ['flake8'],
+  \ 'go': ['go', 'golint', 'govet'],
+  \ 'javascript': ['eslint'],
+  \ 'vue': ['eslint'],
+  \ }
+let g:ale_python_flake8_options = '--ignore=E121,E123,E126,E127,E128,E226,E231,E402,E704'
+nmap <silent> <C-k> <Plug>(ale_previous_wrap)
+nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
 "clojure
 call dein#add('guns/vim-clojure-static')
