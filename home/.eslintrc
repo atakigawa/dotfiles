@@ -1,3 +1,12 @@
 {
-  "extends": "standard"
+  "extends": [
+    "standard",
+    "plugin:vue/essential"
+  ],
+  "rules": {
+    "comma-dangle": ["error", "only-multiline"],
+    "space-before-function-paren": ["error", "never"],
+    "no-irregular-whitespace": ["error", {"skipComments": true}],
+    "no-trailing-spaces": ["error", {"ignoreComments": true}]
+  }
 }
