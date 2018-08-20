@@ -20,6 +20,7 @@ nnoremap <silent> <Space>ub :<C-u>Unite -buffer-name=buffer buffer<CR>
 
 call dein#add('Shougo/deoplete.nvim')
 if !has('nvim')
+  set pyxversion=3
   call dein#add('roxma/nvim-yarp')
   call dein#add('roxma/vim-hug-neovim-rpc')
 endif
