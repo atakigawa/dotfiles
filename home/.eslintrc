@@ -3,6 +3,9 @@
     "standard",
     "plugin:vue/essential"
   ],
+  "parserOptions": {
+    "ecmaVersion": 2017
+  },
   "rules": {
     "comma-dangle": ["error", "only-multiline"],
     "space-before-function-paren": ["error", "never"],
