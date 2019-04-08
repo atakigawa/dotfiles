@@ -138,7 +138,7 @@ let g:ale_linters = {
   \ 'javascript': ['eslint'],
   \ 'vue': ['eslint'],
   \ }
-let g:ale_python_flake8_options = '--ignore=E121,E123,E126,E127,E128,E226,E231,E402,E704'
+let g:ale_python_flake8_options = '--ignore=E121,E123,E126,E127,E128,E226,E231,E402,E501,E704'
 nmap <silent> <C-k> <Plug>(ale_previous_wrap)
 nmap <silent> <C-j> <Plug>(ale_next_wrap)
 
