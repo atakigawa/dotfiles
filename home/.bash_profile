@@ -37,3 +37,11 @@ fi
 if [ -e $(which python) ]; then
     export PYTHONSTARTUP="${HOME}/.pythonstartup.py"
 fi
+
+# homeshick
+if [ -e ~/.homesick/repos/homeshick/homeshick.sh ]; then
+    source ~/.homesick/repos/homeshick/homeshick.sh
+fi
+
+# suppress warning
+export BASH_SILENCE_DEPRECATION_WARNING=1

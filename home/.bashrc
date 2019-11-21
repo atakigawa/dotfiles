@@ -6,7 +6,9 @@ alias la='ls -a'
 alias ll='ls -l'
 alias lla='ls -la'
 
-alias vi='vim'
+alias vi='nvim'
+alias vim='nvim'
+alias ovim='vim' # original vim
 
 alias gst='git st'
 

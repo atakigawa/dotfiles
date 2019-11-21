@@ -74,9 +74,6 @@ autocmd BufEnter *.md set filetype=markdown
 "migemo
 nnoremap m/ g/
 
-"python path
-" let g:python3_host_prog = $PYENV_ROOT . '/versions/3.7.3/bin/python3.7'
-
 "Dein stuff start
 if &compatible
   set nocompatible
@@ -85,9 +82,11 @@ set runtimepath+=~/.vim/repos/github.com/Shougo/dein.vim
 
 call dein#begin('~/.vim')
 if filereadable(expand('~/.vimrc.dein'))
+  "python path
+  let g:python3_host_prog = expand('~/.pyenv/versions/3.7.5/bin/python3.7')
+
   source ~/.vimrc.dein
 endif
-
 call dein#end()
 
 let s:unite_ignore_patterns='\.\(gif\|jpe\?g\|png\|webp\)$\|.sass-cache'
