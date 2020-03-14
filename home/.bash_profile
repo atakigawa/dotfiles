@@ -13,11 +13,6 @@ if [ -d "${HOME}/bin" ]; then
   PATH=${PATH}:"${HOME}/bin"
 fi
 
-#add ruby path
-if [ -d "/usr/local/opt/ruby/bin" ]; then
-    PATH="/usr/local/opt/ruby/bin":${PATH}
-fi
-
 #add chromium depot_tools path
 if [ -d "/opt/depot_tools" ]; then
     PATH="/opt/depot_tools":${PATH}
@@ -36,6 +31,10 @@ if [ -e $(which pyenv) ]; then
 fi
 if [ -e $(which python) ]; then
     export PYTHONSTARTUP="${HOME}/.pythonstartup.py"
+fi
+
+if [ -e $(which rbenv) ]; then
+    eval "$(rbenv init -)"
 fi
 
 # homeshick
