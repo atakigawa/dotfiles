@@ -8,7 +8,7 @@ alias lla='ls -la'
 
 alias vi='nvim'
 alias vim='nvim'
-alias ovim='vim' # original vim
+alias ovim='/usr/local/bin/vim' # original vim
 
 alias gst='git st'
 
