@@ -68,6 +68,8 @@ let g:vim_json_syntax_conceal = 0
 call dein#add('slim-template/vim-slim')
 "js syntax (es6)
 call dein#add('othree/yajs.vim')
+"typescript syntax
+call dein#add('leafgarland/typescript-vim')
 
 "solorized color scheme
 call dein#add('altercation/vim-colors-solarized')
@@ -132,6 +134,7 @@ let g:ale_linters = {
   \ 'python': ['flake8'],
   \ 'go': ['go', 'golint', 'govet'],
   \ 'javascript': ['eslint'],
+  \ 'typescript': ['eslint'],
   \ 'vue': ['eslint'],
   \ }
 let g:ale_python_flake8_options = '--ignore=E121,E123,E126,E127,E128,E226,E231,E402,E501,E704'
