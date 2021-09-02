@@ -62,6 +62,8 @@ augroup html
 augroup END
 
 vnoremap <C-@> <C-[>
+vnoremap u <Nop>
+vnoremap U <Nop>
 
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
