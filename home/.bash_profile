@@ -27,7 +27,9 @@ fi
 export LC_ALL=en_US.UTF-8
 
 if [ -e $(which pyenv) ]; then
-    eval "$(pyenv init -)"
+    eval "$(pyenv init --path)"
+    # eval "$(pyenv init -)"
+    eval "$(pyenv virtualenv-init -)"
 fi
 if [ -e $(which python) ]; then
     export PYTHONSTARTUP="${HOME}/.pythonstartup.py"
