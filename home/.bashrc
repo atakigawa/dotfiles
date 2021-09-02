@@ -21,20 +21,28 @@ peco-history() {
   local FIRST=$((-1*(NUM-1)))
 
   if [ $FIRST -eq 0 ] ; then
-    history -d $((HISTCMD-1))
+    # Remove the last entry, "peco-history"
+    if [ $HISTCMD -gt 1 ]; then
+      history -d $((HISTCMD-1))
+    fi
     echo "No history" >&2
     return
   fi
 
   local CMD=$(fc -l $FIRST | sort -k 2 -k 1nr | uniq -f 1 | sort -nr | sed -E 's/^[0-9]+[[:blank:]]+//' | peco | head -n 1)
 
-  if [ -n "$CMD" ] ; then
+  if [ -n "$CMD" ]; then
+    # Replace the last entry, "peco-history", with $CMD
     history -s $CMD
-    if type osascript > /dev/null 2>&1 ; then
+    if type osascript > /dev/null 2>&1; then
+      # Send UP keystroke to console
       (osascript -e 'tell application "System Events" to keystroke (ASCII character 30)' &)
     fi
   else
-    history -d $((HISTCMD-1))
+    # Remove the last entry, "peco-history"
+    if [ $HISTCMD -gt 1 ]; then
+      history -d $((HISTCMD-1))
+    fi
   fi
 }
 bind -x '"\C-r":peco-history'
