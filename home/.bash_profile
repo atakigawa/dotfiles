@@ -13,13 +13,14 @@ if [ -d "${HOME}/bin" ]; then
   PATH=${PATH}:"${HOME}/bin"
 fi
 
-#add chromium depot_tools path
-if [ -d "/opt/depot_tools" ]; then
-    PATH="/opt/depot_tools":${PATH}
+# brew
+if [ -d /opt/homebrew/bin ]; then
+    # eval "$(/opt/homebrew/bin/brew shellenv)"
+    PATH=/opt/homebrew/bin:/opt/homebrew/sbin:${PATH}
 fi
 
-#add git diff-highlight path
-diff_highlight="/usr/local/share/git-core/contrib/diff-highlight"
+# add git diff-highlight path
+diff_highlight="/opt/homebrew/share/git-core/contrib/diff-highlight"
 if [ -d ${diff_highlight} ]; then
     PATH=${diff_highlight}:${PATH}
 fi
@@ -30,6 +31,7 @@ if [ -e $(which pyenv) ]; then
     eval "$(pyenv init --path)"
     # eval "$(pyenv init -)"
     eval "$(pyenv virtualenv-init -)"
+    export PYENV_VIRTUALENV_DISABLE_PROMPT=1
 fi
 if [ -e $(which python) ]; then
     export PYTHONSTARTUP="${HOME}/.pythonstartup.py"

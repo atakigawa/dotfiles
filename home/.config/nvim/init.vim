@@ -80,13 +80,12 @@ nnoremap m/ g/
 if &compatible
   set nocompatible
 endif
-set runtimepath+=~/.vim/repos/github.com/Shougo/dein.vim
+set runtimepath+=~/.cache/dein/repos/github.com/Shougo/dein.vim
 
 call dein#begin('~/.vim')
 if filereadable(expand('~/.vimrc.dein'))
   "python path
-  "let g:python3_host_prog = expand('~/.pyenv/versions/3.7.5/bin/python3.7')
-  let g:python3_host_prog = expand('~/.pyenv/versions/3.9.6/bin/python3.9')
+  let g:python3_host_prog = expand('~/.pyenv/versions/3.9.8-general/bin/python')
 
   source ~/.vimrc.dein
 endif
